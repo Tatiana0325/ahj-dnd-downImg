@@ -15,7 +15,7 @@ winAddFile.addEventListener("drop", (event) => {
 
   winAddFile.classList.remove("carryover");
 
-  const images = Array.from(event.currentTarget.files);
+  const images = Array.from(event.dataTransfer.files);
 
   images.forEach((item) => {
     let image = createElement(item);
@@ -33,7 +33,7 @@ winAddFile.addEventListener("drop", (event) => {
 winAddFile.addEventListener("click", () => {
   inputAddFile.addEventListener("click", () => {
     inputAddFile.addEventListener("change", (event) => {
-      const images = Array.from(event.dataTransfer.files);
+      const images = Array.from(event.currentTarget.files);
 
       images.forEach((item) => {
         let image = createElement(item);
