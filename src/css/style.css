@@ -34,6 +34,10 @@ body {
 	z-index: 100;
 }
 
+.close-img {
+	width: 40px;
+}
+
 .dragAndDrop {
 	position: relative;
 }

@@ -4,10 +4,14 @@ export default function createElement(element) {
 	let url = URL.createObjectURL(element);
 	
 	imageContainer.innerHTML = `
-		<img class="image" src="${url}" alt="Image">
+		<div>
+			<img class="image" src="${url}" alt="Image">
+		<div>
 		<div class="close">
 			<img class="close-img" src="./img/cross.png" alt="Cross">
 		</div>
 	`
+
+	url = '';
 	return imageContainer;
 }
